@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 //   res.status(200).send('Welcome to GYM');
   res.json({message:'frontend/indexhtml'});
 });
-app.use(express.static(path.join(__dirname, 'frontend')));
+
 app.post('/register',async function (req, res) {
     try{
         const isAlreadyExist=await User.findOne({email:req.body.email})
